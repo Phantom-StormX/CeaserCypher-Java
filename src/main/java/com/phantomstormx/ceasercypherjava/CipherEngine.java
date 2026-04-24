@@ -3,24 +3,20 @@ package com.phantomstormx.ceasercypherjava;
 public class CipherEngine {
     public static String decrypt(String text, int shift) {
 
-        // Handling only lowercase strings
         text = text.toLowerCase();
 
+        StringBuilder message = new StringBuilder();// <-- separate result variable
+
         for (int i = 0; i < text.length(); i++) {
-            // Determine the character position in alpha
             int charPosition = alpha.indexOf(text.charAt(i));
-            // Decryption
-            int keyVal = (charPosition - shift) % 26;
+            int keyVal = (charPosition - shift) % 26; // key value, aka shift
             if (keyVal < 0) {
                 keyVal = alpha.length() + keyVal;
             }
-            // Append the decrypted character
             char replaceVal = alpha.charAt(keyVal);
-            text += replaceVal;
+            message.append(replaceVal);   // <-- append to message, not text
         }
-
-        // returns a deciphered text
-        return text;
+        return message.toString();   // <-- return the accumulated result
     }
 
     // Used as a reference for Caesar ciphers to map characters to new positions.
