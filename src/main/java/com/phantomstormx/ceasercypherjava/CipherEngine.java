@@ -23,21 +23,18 @@ public class CipherEngine {
     public static final String alpha = "abcdefghijklmnopqrstuvwxyz";
 
     public static StringBuilder encrypt(String text, int shift) {
-        // Handling only lowercase strings
         text = text.toLowerCase();
-
         String cipherText = "";
         for (int i = 0; i < text.length(); i++) {
-            // Determine the character position in alpha
             int charPosition = alpha.indexOf(text.charAt(i));
-            // Encryption
-            int keyVal = (shift + charPosition) % 26;
-            // Encrypted character
-            char replaceChar = alpha.charAt(keyVal);
-            // Append the encrypted character
-            cipherText += replaceChar;
+            if (charPosition == -1) {
+                // Not a letter — keep as-is (spaces, punctuation, digits)
+                cipherText += text.charAt(i);
+            } else {
+                int keyVal = (shift + charPosition) % 26;
+                cipherText += alpha.charAt(keyVal);
+            }
         }
-        // Return ciphered text
         return new StringBuilder(cipherText);
     }
 }
