@@ -26,4 +26,4 @@
 
 #### Credentials 
 - [https://www.scaler.com/topics/caesar-cipher-program-in-java/](url)
-  - I used this to help with the logic. I did not want to hardcode everything and i needed somewhere to start. In my defense i had to make the logic within two-ish days, so i do not think i would have enough time to research and completely learn how to code the logic for the Caeser Cipher. 
+  - I(@Phantom-StormX) used this to help with the logic. I did not want to hardcode everything and i needed somewhere to start. In my defense i had to make the logic within two-ish days, so i do not think i would have enough time to research and completely learn how to code the logic for the Caeser Cipher. 
