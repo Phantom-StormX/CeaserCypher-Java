@@ -12,17 +12,26 @@
 - Sumbit button to run button
   
 #### Class Structure
-- 
+- CipherController
+  - Connects the engine and fxml together
+- CipherEngine
+  - Logic behind the Caeser Cipher
+- Launcher
+  - Launches all connected classes
+- Main
+  - Combines both fxml and controller together into one "Stage"
+- Cipher-View.fxml
+  - Basically the "view" of the project. Uses fxml to create the gui
   
 #### How it Works
-- 
+1. The user interacts with the input textbox, interacts with the shift textbox then either presses the encode or decode button.
+2. Button clicks get interpreted through the controller class, which then sends the information given by the user to the engine.
+3. Information gets evaluated and "solved" in the engine
+4. The fxml updates and shows the result of the users input.
 
 #### Challenges
 - learning how to code a cesear ciper in java
 - Allowing the program to run all the classes at once. I had to use AI to help me with this part and it said to make a seperate class, using a parent to combine all of the information. It actually makes it more organized and easy to understand. 
-
-#### Future Improvements
-- 
 
 #### Credentials 
 - [https://www.scaler.com/topics/caesar-cipher-program-in-java/](url)
