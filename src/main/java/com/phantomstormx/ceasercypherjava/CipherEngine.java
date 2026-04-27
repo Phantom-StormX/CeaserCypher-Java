@@ -5,6 +5,11 @@ Unlike the + operator for String objects, which creates a brand-new object
 for every concatenation, .append() modifies the existing object in place.
 */
 
+/* StringBuilder used to create and manipulate mutable (changeable) sequences of characters.
+ Unlike the standard String class, which is immutable and creates a new object every
+ time it is modified, StringBuilder allows you to update the content in-place.
+ */
+
 public class CipherEngine {
     public static String encrypt(String text, int shift) {
 
