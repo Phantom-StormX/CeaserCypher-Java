@@ -26,7 +26,7 @@
     <TextArea fx:id="inputText"
               prefHeight="100"
               wrapText="true"
-              promptText="Enter Imput Text Here." />
+              promptText="Enter Input Text Here." />
 
 
     <HBox spacing="10" alignment="CENTER">
@@ -39,11 +39,11 @@
 
     <HBox spacing="20" alignment="CENTER">
         <Button text="Encode"
-                fx:id="encodeButton"
+                fx:id="handleEncrypt"
                 onAction="#handleEncrypt" />
 
         <Button text="Decode"
-                fx:id="decodeButton"
+                fx:id="handleDecode"
                 onAction="#handleDecode" />
     </HBox>
 

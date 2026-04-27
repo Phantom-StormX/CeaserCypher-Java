@@ -17,7 +17,7 @@ public class CipherEngine {
 
         StringBuilder message = new StringBuilder();// separate result variable
 
-        for (int i = 0; i < text.length(); i++) { // verifies each character
+        for (int i = 0; i < text.length(); i++) { // verifies each character, and starts the loop index at 0
             int charPosition = alpha.indexOf(text.charAt(i));
             if (charPosition == -1) {
                 message.append(text.charAt(i)); // keep spaces/punctuation as-is
@@ -36,7 +36,7 @@ public class CipherEngine {
     public static StringBuilder Encode(String text, int shift) {
         text = text.toLowerCase();
         StringBuilder cipherText = new StringBuilder();
-        for (int i = 0; i < text.length(); i++) {
+        for (int i = 0; i < text.length(); i++) { // starts the loop index at 0
             int charPosition = alpha.indexOf(text.charAt(i));
             if (charPosition == -1) {
                 // Not a letter — keep as-is (spaces, punctuation, digits)
