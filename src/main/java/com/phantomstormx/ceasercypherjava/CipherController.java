@@ -34,7 +34,7 @@ public class CipherController {
             return;
         }
 
-        StringBuilder encoded = CipherEngine.Encode(text, shift);
+        StringBuilder encoded = CipherEngine.decode(text, shift);
         outputText.setText(encoded.toString());
     }
 
@@ -62,8 +62,12 @@ public class CipherController {
             return Integer.MIN_VALUE;
         }
         try {
+            if(Integer.parseInt(shiftStr) <= 0) {
+                outputText.setText("Shift must be a positive integer");
+                return Integer.MIN_VALUE;
+            }
             return Integer.parseInt(shiftStr.trim());
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
             outputText.setText("Shift must be a whole number.");
             return Integer.MIN_VALUE;
         }
