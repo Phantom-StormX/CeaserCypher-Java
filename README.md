@@ -9,7 +9,7 @@
 - Decode button to code message based on shift text box input
 - Input text box to place encoded/decoded message
 - Output text box to show neww encoded/decoded message
-- Sumbit button to run button
+- Submit button to run button
   
 #### Class Structure
 - CipherController
@@ -30,7 +30,7 @@
 4. The fxml updates and shows the result of the users input.
 
 #### Challenges
-- learning how to code a cesear ciper in java
+- learning about the caeser cipher, and how to make it function in java code.
 - Allowing the program to run all the classes at once. I had to use AI to help me with this part and it said to make a seperate class, using a parent to combine all of the information. It actually makes it more organized and easy to understand. 
 
 #### Credentials 
