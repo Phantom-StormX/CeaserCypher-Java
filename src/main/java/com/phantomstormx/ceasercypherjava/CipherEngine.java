@@ -33,7 +33,7 @@ public class CipherEngine {
     // Used as a reference for Caesar ciphers to map characters to new positions.
     public static final String alpha = "abcdefghijklmnopqrstuvwxyz";
 
-    public static StringBuilder Encode(String text, int shift) {
+    public static StringBuilder decode(String text, int shift) {
         text = text.toLowerCase();
         StringBuilder cipherText = new StringBuilder();
         for (int i = 0; i < text.length(); i++) { // starts the loop index at 0

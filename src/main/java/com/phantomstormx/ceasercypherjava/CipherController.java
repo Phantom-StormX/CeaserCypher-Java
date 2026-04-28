@@ -1,5 +1,6 @@
 package com.phantomstormx.ceasercypherjava;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -16,14 +17,13 @@ public class CipherController {
     @FXML
     private TextArea outputText;
 
-    @FXML
-
     /*
     .MIN_VALUE is a constant available in wrapper
     classes that represents the smallest value a
     specific numeric data type can hold.
      */
 
+    @FXML
     private void handleEncrypt() {
         String text = inputText.getText(); // yoinks the text input
         int shift = parseShift(); // yoinks the shift input
@@ -62,7 +62,7 @@ public class CipherController {
             return Integer.MIN_VALUE;
         }
         try {
-            if(Integer.parseInt(shiftStr) <= 0) {
+            if (Integer.parseInt(shiftStr) <= 0) {
                 outputText.setText("Shift must be a positive integer");
                 return Integer.MIN_VALUE;
             }
@@ -71,5 +71,17 @@ public class CipherController {
             outputText.setText("Shift must be a whole number.");
             return Integer.MIN_VALUE;
         }
+    }
+
+    @FXML
+    private void handleClear() {
+        inputText.clear();
+        outputText.clear();
+        shiftField.clear();
+    }
+
+    @FXML
+    private void handleExit() {
+        Platform.exit();
     }
 }

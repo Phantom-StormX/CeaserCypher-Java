@@ -7,6 +7,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <VBox spacing="15" alignment="CENTER"
       xmlns="http://javafx.com/javafx/8"
@@ -17,7 +19,17 @@
         <Insets top="20" right="20" bottom="20" left="20"/>
     </padding>
 
+    <!-- Image at Top -->
+<!--    <ImageView fitHeight="150"-->
+<!--               fitWidth="150"-->
+<!--               preserveRatio="true">-->
+<!--        <image>-->
+<!--            <Image url="file:///var/folders/qq/03gytprn3y31573b5vl0jvm40000gp/T/TemporaryItems/NSIRD_screencaptureui_pKbhmM/Screenshot%202026-04-28%20at%2011.01.25.png" />-->
+<!--        </image>-->
 
+<!--    </ImageView>-->
+
+    <!-- Title -->
     <Label text="Caesar Cipher Encoder / Decoder"
            style="-fx-font-size: 18px; -fx-font-weight: bold;" />
 
@@ -45,6 +57,10 @@
         <Button text="Decode"
                 fx:id="handleDecode"
                 onAction="#handleDecode" />
+
+        <Button text="Clear"
+                fx:id="handleClear"
+                onAction="#handleClear" />
     </HBox>
 
 
@@ -54,5 +70,11 @@
               wrapText="true"
               editable="false"
               promptText="Output Text will Appear Here" />
+
+    <!-- Exit Button -->
+    <Button text="Exit"
+            fx:id="handleExit"
+            onAction="#handleExit"
+            prefWidth="100" />
 
 </VBox>
